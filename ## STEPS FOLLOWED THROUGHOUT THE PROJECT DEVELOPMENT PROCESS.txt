@@ -1,0 +1,74 @@
+-------------
+(session-0) :
+-------------
+	a> downloaded starter files
+	b> run cmd -> npm install & npm start
+	c> intially making controller functions for auth and job
+	d> making controller func. and exporting back(temp. for getting started)
+	e> making routes of the handler func. and exporting it
+	f> in app.js importing routes and using it.
+	g> here, made one structure for route like : ..{domainpart}.../api/..{custom routes}..
+	h> this path will be follwed in all api calls
+	i> connecting to the mongo dbs {make sure first that mongod is one and created the dbs correctly} 
+	
+	< till now all setup things are ready >
+	< now the further development will be as below >
+
+-------------
+(session-1) :
+-------------
+	a> creating userSchema
+	b> creating usermodel from userSchema and exporting it
+	c> create user func. in register controller
+	d> creating one user from postman and checking if everything is fine or not
+	e> done!! everything is nice. move further
+	
+	f> hashed password creation func. added in register handler
+	g> created hashed password using Mongoose MIDDLEWARE (remove step-f)(both correct, but this one is more professional)
+	h> generated token in handler
+	i> generated token in INSTANCE METHOD(remove step- h)(BOTH CORRECT, but this one is more professional)
+	
+	< till now hashed password and token is been set >
+
+-------------
+(session-2) :
+-------------
+	a> setting login conroller
+	b> checking if email and password correctly passed
+	c> checking if email is correct 
+	d> then checking if password for that is correct using bcrypt.compare()
+	e> then if both correct then username and token retrieved else errors
+	
+	f> creating func. for authenticating token
+	g> verifying token in authorization header with the stored one using jwt.verify()
+	h> after verifying that token exists we pass userid and name along with request and let process move further using next()
+	i> this "auth" is been set up before the route handler in app.use()
+	j> so any path comes then first goes to auth , if authenticated then move further else tell user to authenticate first
+	
+	< till now authentication process is covered >
+
+-------------
+(session-3) :
+-------------
+	a> job schema created
+	b> job model created using job schema and exported
+	c> create job route handler made and tested
+	d> getalljobs route handler made and tested
+	
+	NOTE:IMP -> in postman we have set authorization token dynamically
+			for that first in login's test we have retrieved token and made
+			global token named "accessToken" out of that and then in all routes
+			authorization field we have selected option "Bearer Token" and in 
+			value of that set "{{accessToken}}".
+
+		so now on no need to give token manually, it will take token dynamically when once user login is fetched
+
+	e> getjob route handler is made and tested
+	f> updatejob route handler is made and tested
+	g> deletejob route handler is made and tested
+
+	h> some security packages are added and used
+
+	<<<<!! HERE, OUR PROJECT ENDS. JOBS API IS CREATED. !!>>>>
+		<< functionalities : register and login user, CRUD on jobs >>
+		

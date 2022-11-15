@@ -1,0 +1,12 @@
+HERE, STARTER FILES BEEN PROVIDED BY JOHN, SO USING IT.
+IT CONTAINS BASIC STRUCTURE. TO GET START WITH REAL THINGS
+
+
+
+IT IS MADE USING THE JOBS-API PROJECT BY JOHN SMILGA(40 lect)
+
+now from that 40 lect till 32 is watched (project made !!!)
+
+now 33 to 40 are for deploy on heroku and swagger ui add and etc...
+
+so skipped for right now can add later on
